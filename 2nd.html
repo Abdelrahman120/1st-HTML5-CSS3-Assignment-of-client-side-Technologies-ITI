@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="big">
+    <div>
+        <div id="black">
+            <div id="green"></div>
+            <div id="yellow"></div>
+            <div id="red"></div>
+        </div>
+        <div id="last"></div>
+    </div>
+        <img src="giphy.gif" alt="#img">
+    </div>
+    
+    <style>
+        #big{
+            display: flex;
+        }
+        #black{
+            background-color: black;
+            width: 200px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #last{
+            width: 20px;
+            height: 150px;
+            background-color: black;
+            align-self: left;
+            margin:0px 95px ;
+            
+        }
+        #green{
+            background-color: green;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+        #yellow{
+            background-color: yellow;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+        #red{
+            background-color: red;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+        #green:hover, #yellow:hover, #red:hover{
+            filter: blur(5px);
+            width: 150px;
+            height: 150px;
+        }
+        img{
+            width: 400px;
+            height: 500px;
+            margin: 100px 0;
+            animation-name: div-animation;
+            animation-duration:10s;
+            position: relative;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes div-animation{
+            0%{left:0px;}
+            50%{left:700px}
+            100%{transform:scaleX(-1);left:0px}
+        }
+    </style>
+</body>
+</html>
